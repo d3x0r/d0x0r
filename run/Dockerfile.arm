@@ -1,0 +1,9 @@
+
+FROM d3x0r/alpine-arm as d3x0r-node-alpine-arm
+WORKDIR /app
+COPY --from=d3x0r/node-alpine-extra /app/node_modules /app/node_modules
+COPY --from=d3x0r/node-alpine-build-arm /app/sack.vfs /app/node_modules/sack.vfs
+
+RUN apk add nodejs
+RUN apk add unixodbc psqlodbc
+

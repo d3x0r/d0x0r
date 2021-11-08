@@ -1,0 +1,4 @@
+FROM alpine@sha256:b06a5cf61b2956088722c4f1b9a6f71dfe95f0b1fe285d44195452b8a1627de7  as alpine-core
+#ADD alpine-minirootfs-3.15.0_alpha20210804-x86_64.tar.gz /
+CMD ["/bin/sh"]
+

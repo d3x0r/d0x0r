@@ -1,0 +1,14 @@
+{
+  "name": "DekCore",
+  "version": "0.0.1",
+  "main": "void.js",
+  "dependencies": {
+    "@d3x0r/bloomnhash": "latest",
+    "@d3x0r/slab-array": "latest",
+    "@d3x0r/srg": "latest",
+    "@d3x0r/socket-service": "latest",
+    "@d3x0r/popups": "latest",
+    "@d3x0r/object-storage": "latest",
+    "jsox": "latest"
+  }
+}

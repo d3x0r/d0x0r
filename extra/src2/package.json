@@ -4,6 +4,7 @@
   "main": "void.js",
   "dependencies": {
     "@d3x0r/bloomnhash": "latest",
+    "@d3x0r/user-database-remote": "latest",
     "@d3x0r/slab-array": "latest",
     "@d3x0r/srg": "latest",
     "@d3x0r/socket-service": "latest",

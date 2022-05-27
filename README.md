@@ -92,3 +92,11 @@ FROM d3x0r/node-alpine-run
 copy . .
 CMD ["node", "hello.mjs"]
 ```
+
+
+# Gui Stack
+
+- base
+- gui (weston, rdp, some icon and font resources)
+- gui-build - instead of base, applies build to the gui image, and builds sack-gui branch of sack.vfs
+- gui-build-update - pulls latest changes from github; much shorter process than the above source build.

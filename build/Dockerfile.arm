@@ -1,15 +1,7 @@
 
-from d3x0r/alpine as buildtools
-label buildTools="Root Build System"
-RUN apk add python3 make g++ cmake
-RUN apk add git
-RUN apk add unixodbc-dev 
-RUN apk add util-linux-dev
-RUN apk add nodejs npm
+from d3x0r/alpine-build-tools-arm64 as buildtools
+label buildTools="Do Build"
 
-RUN apk add ncurses-dev ncurses slang linux-headers
-
-RUN npm install -g cmake-js
 WORKDIR /app
 COPY . .
 RUN git clone https://github.com/d3x0r/sack.vfs --depth=1 

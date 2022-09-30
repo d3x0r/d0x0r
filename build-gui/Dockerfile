@@ -22,8 +22,9 @@ WORKDIR /app/sack.vfs
 RUN npm run build-gui
 #RUN cmake-js configure
 #RUN cmake-js build
-# moved this later...
-# RUN rm -rf src tests test tutorial build/CMakeFiles *.md .git
+
+# minimize output
+RUN rm -rf src tests test tutorial build/CMakeFiles *.md .git build/src
 
 WORKDIR /tmp/rdp-key
 

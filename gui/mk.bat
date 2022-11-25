@@ -1,1 +1,1 @@
-docker build -t d3x0r/alpine-gui --no-cache  .
+docker build -t d3x0r/node-alpine-gui --no-cache  .

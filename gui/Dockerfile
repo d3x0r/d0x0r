@@ -30,7 +30,7 @@ font=noto\n\
 font-size=18\n\
 ' >> $HOME/.config/weston.ini
 
-run echo $'<?xml version="1.0"?>]\n\
+run echo $'<?xml version="1.0"?>\n\
 <!DOCTYPE fontconfig SYSTEM "urn:fontconfig:fonts.dtd">\n\
 <!-- /etc/fonts/fonts.conf file to configure system font access -->\n\
 <fontconfig>\n\
@@ -61,7 +61,7 @@ run echo $'<?xml version="1.0"?>]\n\
       <bool>true</bool>\n\
     </edit>\n\
   </match>\n\
-<fontconfig>\n\
+</fontconfig>\n\
 ' > /etc/fonts/local.conf
 
 EXPOSE 3389/tcp

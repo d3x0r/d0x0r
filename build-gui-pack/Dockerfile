@@ -1,5 +1,5 @@
 
-FROM d3x0r/node-alpine-gui-build as d3x0r-node-alpine
+FROM d3x0r/node-alpine-gui-build as d3x0r-node-alpine-gui-build
 
 WORKDIR /app/sack.vfs
 

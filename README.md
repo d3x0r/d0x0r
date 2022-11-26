@@ -9,8 +9,7 @@ This is some docker build scripts to build a set of minimal node-js containers w
 
 This is just the linux and busybox core.
 
-
-## build (d3x0r-alpine-build)
+## build (d3x0r/alpine-build-tools)
 
 This is a layer containing the build environment and tools which build the native part of this.
 This has npm, cmake-js no python.
@@ -22,7 +21,18 @@ Adds:
 - g++ unixodbc-dev util-linux-dev(uuid) cmake
 
 
-## extra (d3x0r-alpine-extra)
+
+## build (d3x0r/alpine-build)
+
+
+
+Builds sack.vfs non-gui.
+
+Includes 
+- d3x0r/alpine-build-tools
+
+
+## extra (d3x0r/alpine-extra)
 
 This layer is just JS libraries which have some inter-relation with sack.
 
@@ -96,7 +106,10 @@ CMD ["node", "hello.mjs"]
 
 # Gui Stack
 
-- base
-- gui (weston, rdp, some icon and font resources)
-- gui-build - instead of base, applies build to the gui image, and builds sack-gui branch of sack.vfs
-- gui-build-update - pulls latest changes from github; much shorter process than the above source build.
+- base[d3x0r/alpine]
+- gui[d3x0r/node-alpine-gui] - (weston, rdp, some icon and font resources)
+- gui-build-tools[d3x0r/node-alpine-gui-build-tools] - adds compilers, libraries and headers required to build.
+- gui-build[d3x0r/node-alpine-gui-build] - builds sack-gui branch of sack.vfs
+- gui-build-update[d3x0r/node-alpine-gui-build-update] - pulls latest changes from github; much shorter process than the above source build.
+- gui-build-pack[d3x0r/node-alpine-gui-pack] - remove build temporary products.
+                                       

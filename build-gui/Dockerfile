@@ -1,14 +1,15 @@
 
-from d3x0r/node-alpine-gui-build-tools as platform
+from d3x0r/alpine-gui-build-tools as platform
 label buildTools="Root Build(GUI) System"
 
 
 WORKDIR /app
 COPY . .
-RUN git clone https://github.com/d3x0r/sack.vfs -b sack-gui --depth=1
+RUN git clone https://github.com/d3x0r/sack.vfs --depth=1
 
 WORKDIR /app/sack.vfs
-RUN npm install .
+RUN export cmake_js_extra_flags='--CDNEED_LIBRESSL=0 --CDNEED_FREETYPE=0 --CDNEED_JPEG=0 --CDNEED_ZLIB=0'
+RUN npm install .  --ignore-scripts
 RUN npm run build-gui
 
 ## minimize output

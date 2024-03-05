@@ -1,0 +1,1 @@
+docker run -p 2222:22 -dit d3x0r/alpine-gui 
